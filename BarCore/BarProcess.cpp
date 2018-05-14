@@ -66,7 +66,6 @@ DWORD WINAPI myProcessingThreadProc(LPVOID lpParameter)
         else
         {
             curOffset += (int)(cr+g_nCR-buf);
-            // ???
             *cr = 0;
         }
 

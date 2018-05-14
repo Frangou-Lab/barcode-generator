@@ -5,11 +5,9 @@
 #include <ctime>
 #include <memory>
 
-#include "key.h"
-
 #define MY_APP_NAME	"BarAnalyzer"
 
-char g_alpgabet[] = "ATGCN";
+char g_alphabet[] = "ATGCN";
 BarNodeManager *g_nodeManager = NULL;
 BarNode *g_root = NULL;
 BarArray *g_codes = NULL;

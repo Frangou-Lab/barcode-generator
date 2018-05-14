@@ -9,8 +9,7 @@ namespace BarGenerator
     {
         [DllImport("BarCore.dll")]
         public static extern int generate(string outPath, int len, int distance, int maxCodes, int generateDesc, int detectDeadLoop);
-        [DllImport("BarCoreMem.dll", EntryPoint="generate") ]
-        public static extern int generateMem(string outPath, int len, int distance, int maxCodes, int generateDesc, int detectDeadLoop);
+
         [DllImport("BarCore.dll")]
         public static extern int calcMinDistance(string inPath, int barLength, int idsColumn, ref int maxDist, ref double avgDist);
 
@@ -97,11 +96,7 @@ namespace BarGenerator
 
             m_success = false;
             m_deadLoop = false;
-
-            if (cbFast.Checked)
-                res = generateMem(tbOutput.Text, m_codeLen, m_hDist, m_codesNum, cbGenDesc.Checked ? 1 : 0, cbDeadLoop.Checked ? 1 : 0);
-            else
-                res = generate(tbOutput.Text, m_codeLen, m_hDist, m_codesNum, cbGenDesc.Checked ? 1 : 0, cbDeadLoop.Checked ? 1 : 0);
+            res = generate(tbOutput.Text, m_codeLen, m_hDist, m_codesNum, cbGenDesc.Checked ? 1 : 0, cbDeadLoop.Checked ? 1 : 0);
 
             if (res != 0)
             {

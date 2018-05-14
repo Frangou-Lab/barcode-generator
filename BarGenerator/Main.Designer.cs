@@ -45,7 +45,6 @@
             this.rb9 = new System.Windows.Forms.RadioButton();
             this.cbVerify = new System.Windows.Forms.CheckBox();
             this.pbMain = new System.Windows.Forms.ProgressBar();
-            this.cbFast = new System.Windows.Forms.CheckBox();
             this.cbDeadLoop = new System.Windows.Forms.CheckBox();
             this.btnCalc = new System.Windows.Forms.Button();
             this.ofdMain = new System.Windows.Forms.OpenFileDialog();
@@ -170,7 +169,7 @@
             this.cbGenDesc.Name = "cbGenDesc";
             this.cbGenDesc.Size = new System.Drawing.Size(153, 17);
             this.cbGenDesc.TabIndex = 14;
-            this.cbGenDesc.Text = "Generate fake descriptions";
+            this.cbGenDesc.Text = "Generate IDs";
             this.cbGenDesc.UseVisualStyleBackColor = true;
             // 
             // sfdMain
@@ -235,17 +234,6 @@
             this.pbMain.TabIndex = 20;
             this.pbMain.Visible = false;
             // 
-            // cbFast
-            // 
-            this.cbFast.AutoSize = true;
-            this.cbFast.Location = new System.Drawing.Point(15, 83);
-            this.cbFast.Name = "cbFast";
-            this.cbFast.Size = new System.Drawing.Size(138, 17);
-            this.cbFast.TabIndex = 21;
-            this.cbFast.Text = "Less memory but slower";
-            this.cbFast.UseVisualStyleBackColor = true;
-            this.cbFast.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
             // cbDeadLoop
             // 
             this.cbDeadLoop.AutoSize = true;
@@ -300,12 +288,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(357, 185);
+            this.ClientSize = new System.Drawing.Size(357, 196);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.nudColumn);
             this.Controls.Add(this.btnCalc);
             this.Controls.Add(this.cbDeadLoop);
-            this.Controls.Add(this.cbFast);
             this.Controls.Add(this.pbMain);
             this.Controls.Add(this.cbVerify);
             this.Controls.Add(this.rb9);
@@ -354,7 +341,6 @@
         private System.Windows.Forms.RadioButton rb9;
         private System.Windows.Forms.CheckBox cbVerify;
         private System.Windows.Forms.ProgressBar pbMain;
-        private System.Windows.Forms.CheckBox cbFast;
         private System.Windows.Forms.CheckBox cbDeadLoop;
         private System.Windows.Forms.Button btnCalc;
         private System.Windows.Forms.OpenFileDialog ofdMain;

@@ -3,6 +3,7 @@
 #include <cstdint>
 #include <cstring>
 #include <memory>
+#include <vector>
 
 #ifdef __APPLE__
 typedef int32_t long_t;
@@ -40,7 +41,7 @@ public:
     BarCode(int len, int totalFiles, int totalMPs);
     ~BarCode();
 
-    static int dectectCodeLen(char *str, int colNumber, char separator);
+    static int detectCodeLen(char *str, int colNumber, char separator);
 
     int loadFromStringMP(const char *str, int colNumber, char separator, int mpLen, int mpCount, int *mpMask, char **mpData);
 
@@ -138,8 +139,7 @@ public:
 
 protected:
     void addPage();
-    uint8_t **m_pages;
-    int m_pagesCount;
+    std::vector<uint8_t*> m_pages;
     uint32_t m_pos;
 };
 

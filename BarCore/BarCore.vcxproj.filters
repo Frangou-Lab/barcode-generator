@@ -38,8 +38,5 @@
     <ClInclude Include="BarCore.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="key.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>

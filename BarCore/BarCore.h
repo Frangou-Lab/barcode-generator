@@ -39,8 +39,8 @@ extern "C"
     BARCORE_API int dumpResults(const char *outPath);
     BARCORE_API void cleanup();
 
-    BARCORE_API int generate(char *outPath, int len, int distance, int maxCodes, int generateDesc, int detectDeadLoop);
-    BARCORE_API int calcMinDistance(char *inPath, int barLength, int idsColumn, int *maxDist, double *avgDist);
+    BARCORE_API int generate(const char *outPath, int len, int distance, int maxCodes, int generateDesc, int detectDeadLoop);
+    BARCORE_API int calcMinDistance(const char *inPath, int barLength, int idsColumn, int *maxDist, double *avgDist);
 
     BARCORE_API char *generateActivationRequest(char *appName, char *name, char *eMail);
     BARCORE_API int isActivated(char *appName);
@@ -50,7 +50,7 @@ extern "C"
     BARCORE_API void decreaseNumberOfTrialAttempts(char *appName);
 }
 
-extern char g_alpgabet[];
+extern char g_alphabet[];
 extern BarNodeManager *g_nodeManager;
 extern BarNode *g_root;
 extern BarArray *g_codes;
@@ -83,6 +83,3 @@ enum BarErrors
     BadGenParams = 8,
     DeadLoopDetected = 9
 };
-
-#define GENERATOR
-#undef GENERATOR
