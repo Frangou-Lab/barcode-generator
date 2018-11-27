@@ -1,9 +1,6 @@
 barcode-generator
 =================
 
-Usage
------
-
 Building
 --------
 Requires Visual Studio 2017
